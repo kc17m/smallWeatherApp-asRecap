@@ -16,14 +16,13 @@ const weather = (city) => {
 }
 
 
-//display weather
+//display weather 
 const displayWeather = (data) => {
     const {name} = data;
         const {icon, description} = data.weather[0];
         const {temp, humidity, feels_like, temp_min, temp_max} = data.main;
         const {speed} = data.wind;
         
-        console.log("Name: ", name, "icon: ", icon, "descr: ", description, "temp,humidity, speed: ",temp, humidity, speed) 
         document.querySelector(".city").innerText = `Weather in ${name}`
         document.querySelector(".icon").src = `http://openweathermap.org/img/wn/${icon}.png`;
         document.querySelector(".description").innerText = description[0].toUpperCase() + description.slice(1);
@@ -33,6 +32,7 @@ const displayWeather = (data) => {
         document.querySelector(".feels").innerText = `Feels like ${feels_like} °C`
         document.querySelector(".min").innerText = `Temperature min: ${temp_min}`
         document.querySelector(".max").innerText = `Temperature max: ${temp_max}`
+        document.querySelector(".none").classList.remove("none")
 }
 
 ///search
@@ -46,13 +46,14 @@ const searchForCity = () => {
     searchValue.addEventListener("keyup", function(e) {
         if (e.key == "Enter") {
             city = searchValue.value;
-            console.log(searchValue.value)
-            weather(searchValue.value)
+            console.log(city)
+            weather(city)
         }
-    })
-   
+    })   
 }
+
 searchForCity()
+
 
 
 const search = () => {
@@ -63,5 +64,7 @@ const search = () => {
 }
 
 search()
+
+
 
 

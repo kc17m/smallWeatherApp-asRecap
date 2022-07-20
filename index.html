@@ -10,11 +10,7 @@
   <body>
     <div class="card">
       <div class="search">
-        <input
-          type="text"
-          class="search-bar"
-          placeholder="Your city here...."
-        />
+        <input type="text" class="search-bar" placeholder="City..." />
         <button>
           <svg
             stroke="currentColor"
@@ -32,7 +28,7 @@
         </button>
       </div>
       <div class="weather">
-        <h2 class="city">Weather Forecast</h2>
+        <h2 class="city">Weather in your selected <span class="selected-city">City</span></Your></h2>
         <h3 class="temperature"></h3>
 
         <section>
@@ -41,7 +37,7 @@
             <img src="" alt="" class="icon" />
           </div>
           <div class="details">
-            <h4>Details:</h4>
+            <h4 class="none">Details:</h4>
             <p class="feels"></p>
             <p class="min"></p>
             <p class="max"></p>
