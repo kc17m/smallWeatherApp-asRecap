@@ -30,8 +30,8 @@ const displayWeather = (data) => {
         document.querySelector(".humidity").innerText = `Humidity: ${humidity} %`;
         document.querySelector(".wind").innerText = `Wind speed: ${speed} km/h`;
         document.querySelector(".feels").innerText = `Feels like ${feels_like} °C`
-        document.querySelector(".min").innerText = `Temperature min: ${temp_min}`
-        document.querySelector(".max").innerText = `Temperature max: ${temp_max}`
+        document.querySelector(".min").innerText = `Temperature min: ${temp_min} °C`
+        document.querySelector(".max").innerText = `Temperature max: ${temp_max} °C`
         document.querySelector(".none").classList.remove("none")
 }
 
