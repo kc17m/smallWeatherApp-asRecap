@@ -26,12 +26,12 @@ const displayWeather = (data) => {
         document.querySelector(".city").innerText = `Weather in ${name}`
         document.querySelector(".icon").src = `http://openweathermap.org/img/wn/${icon}.png`;
         document.querySelector(".description").innerText = description[0].toUpperCase() + description.slice(1);
-        document.querySelector(".temperature").innerText = `${temp} °C`;
+        document.querySelector(".temperature").innerText = `${temp.toFixed(1)} °C`;
         document.querySelector(".humidity").innerText = `Humidity: ${humidity} %`;
         document.querySelector(".wind").innerText = `Wind speed: ${speed} km/h`;
-        document.querySelector(".feels").innerText = `Feels like ${feels_like} °C`
-        document.querySelector(".min").innerText = `Temperature min: ${temp_min} °C`
-        document.querySelector(".max").innerText = `Temperature max: ${temp_max} °C`
+        document.querySelector(".feels").innerText = `Feels like ${feels_like.toFixed(1)} °C`
+        document.querySelector(".min").innerText = `Temperature min: ${temp_min.toFixed(1)} °C`
+        document.querySelector(".max").innerText = `Temperature max: ${temp_max.toFixed(1)} °C`
         document.querySelector(".none").classList.remove("none")
 }
 
