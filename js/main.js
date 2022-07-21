@@ -32,13 +32,12 @@ const displayWeather = (data) => {
         document.querySelector(".feels").innerText = `Feels like ${feels_like.toFixed(1)} °C`
         document.querySelector(".min").innerText = `Temperature min: ${temp_min.toFixed(1)} °C`
         document.querySelector(".max").innerText = `Temperature max: ${temp_max.toFixed(1)} °C`
-        document.querySelector(".none").classList.remove("none")
+        document.querySelector(".details").classList.remove("none")
 }
 
 ///search
 
 const searchButton = document.querySelector(".search button")
-console.log(searchButton)
 const searchValue = document.querySelector(".search-bar")
 
 
@@ -48,6 +47,7 @@ const searchForCity = () => {
             city = searchValue.value;
             console.log(city)
             weather(city)
+            searchValue.value = ""
         }
     })   
 }
@@ -60,6 +60,7 @@ const search = () => {
     searchButton.addEventListener("click", function() {
     console.log("clicked")
     weather(searchValue.value)
+    searchValue.value = ""
     })
 }
 
